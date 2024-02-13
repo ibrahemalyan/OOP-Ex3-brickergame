@@ -1,0 +1,25 @@
+ibrahem.alyan
+
+
+
+I add more classes to the implementation in order to be
+more flexible in creating game objects.
+1) AnotherPaddle which represent a paddle which appears
+    when ball collide with brick that has this strategy.
+2) MoreHeart which represent a rewarded heart which respawn
+    when ball collide with brick that has this strategy.
+3) CameraController class which controls the camera of game an let it follow an objects.
+
+I changed the CollisionStrategy from class that responsible for breaking brick to
+ an interface in order to unify the usage of the other strategies that implements this interface,
+and the normal Collision Strategy is seperated in another class that is composed in all other strategies
+in order to apply it with to duplicate it's code.
+Also in order to ease the use of all strategies I used factory design pattern,
+this design pattern can help manage the choose of every single strategy class without in efficient way.
+
+I limited the usage of 3 strategies using the composition design pattern and using
+the class DoubleStrategy that randomly generate another 2 strategies and using
+composition we pass them to brick and applying them when collision detected.
+
+
+
